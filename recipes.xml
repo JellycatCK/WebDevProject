@@ -1,0 +1,10 @@
+<recipe>
+    <name>curry</name>
+    <region>south asia</region>
+    <method>make curry</method>
+</recipe>
+<recipe>
+    <name>stir fry</name>
+    <region>north asia</region>
+    <method>make stir fry</name>
+</recipe>
