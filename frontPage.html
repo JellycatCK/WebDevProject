@@ -25,8 +25,9 @@
 <body class="d-flex flex-column h-100">
 
 	<header>
-		<!-- Fixed Navigation bar -->
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		
+		<!-- Fixed Navigation bar (removed default bg-dark) -->
+		<nav class="navbar navbar-custom navbar-expand-md navbar-dark fixed-top">
 			<div class="container-fluid">
 
 				<div class="collapse navbar-collapse" id="navbarCollapse">
@@ -40,7 +41,7 @@
 					</ul>
 				
 					<!-- Brand Header -->
-					<a class="navbar-brand mx-auto" href="#">Regional Recipes</a>
+					<a class="navbar-brand navbar-brand-custom mx-auto" href="#">Regional Recipes</a>
 
 					<!-- Search function -->
 					<form class="d-flex">
@@ -51,6 +52,7 @@
 			</div>
 		</nav>
 	</header>
+
 	<main role="main" class="container">
 
 		<!-- Display clickable map component - see http://simplemaps.com/docs for further info -->
@@ -60,12 +62,15 @@
 			</p>
 		</div>
 
-	</main><!-- /.container -->
+	</main>
 
+	<!-- Display footer -->
 	<footer class="footer">
+
 		<div class="container">
-		  <span class="text-muted">Website developed by Alice, Becky and Sarah</span>
+		  <span>Website developed by Alice, Becky and Sarah</span>
 		</div>
+
 	</footer>
 
 	<!-- Bootstrap core JavaScript ================================================== -->
