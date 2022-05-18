@@ -59,14 +59,15 @@ var simplemaps_continentmap_mapdata={
     popup_opacity: 0.9,
     popup_shadow: 1,
     popup_corners: 5,
-    popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+    // popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+    popup_font: "16px/1.5 Gabriola",
     popup_nocss: "no",
     
 		//Advanced settings
 		div: "map",
     auto_load: "yes",
     rotate: "0",
-    url_new_tab: "yes",
+    url_new_tab: "no",
     images_directory: "default",
     import_labels: "no",
     fade_time: 0.1,
