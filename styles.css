@@ -1,25 +1,6 @@
 #recipes {
-    width: 390px;
-    text-align: center;
-    border: solid 1px #000;
-    overflow: hidden;
-}
-
-#recipes div {
-    width: 180px;
-    text-align: left;
-    border: solid 1px #000;
-    margin: 1px;
-    padding: 2px 5px;
-}
-
-.col1 {
-    float: left;
-    clear: both;
-}
-
-.col2 {
-    float: right;
+  font-family: 'Gabriola';
+  font-size: xx-large;
 }
 
 body {
@@ -27,6 +8,9 @@ body {
     background-color:whitesmoke;
 }
 
+/* ----------------------------------------------
+   Map component styles
+-------------------------------------------------- */
 .map_template {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -38,6 +22,7 @@ body {
 .navbar-custom {
   background-color: darkcyan;
   font-family: 'Gabriola';
+  color: white;
 }
 
 .navbar-brand-custom {
@@ -72,4 +57,5 @@ html {
     text-align: center;
     color: white;
     font-family: 'Gabriola';
+    cursor: url(img/spoon.gif), auto; /* Custom cursor - must be 128 x 128px max */
   }
