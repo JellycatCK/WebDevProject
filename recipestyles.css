@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: 'Gabriola', sans-serif;
+}
+
+img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+table, th, tr, td {
+    border: 1px solid;
+}
+
+th {
+    background-color: darkcyan;
+}
+
+ul {
+    margin-left: auto;
+    margin-right: auto;
+    list-style-position: inside;
+}
