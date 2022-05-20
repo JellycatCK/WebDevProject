@@ -5,6 +5,10 @@ body {
     background-color:whitesmoke;
 }
 
+html {
+    padding-left: calc(100vw - 100%);
+}
+
 img {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -33,7 +37,7 @@ th {
     background-color: darkcyan;
 }
 
-ul {
+method {
     margin-left: auto;
     margin-right: auto;
     list-style-position: inside;
@@ -71,6 +75,7 @@ html {
     background-color: darkcyan;
     font-family: 'Gabriola';
     color: white;
+    
   }
   
   .navbar-brand-custom {
