@@ -37,11 +37,20 @@ th {
     background-color: darkcyan;
 }
 
-method {
+.method {
     margin-left: auto;
     margin-right: auto;
     list-style-position: inside;
 }
+
+button {
+    border-radius: 6px;
+}
+
+input {
+    border-radius: 6px;
+}
+
 
 /* ----------------------------------------------
    Footer styles
