@@ -61,6 +61,14 @@ function showAllRecipes() {
 var xml =
 "<recipes>" +
     "<recipe>" +
+        "<name>Pad Thai</name>" +
+        "<recipeURL>padthai.html</recipeURL>" +
+        "<pictureURL>padthai.jpeg</pictureURL>" +
+        "<region>south asia</region>" +
+        "<servings>4</servings>" +
+    "</recipe>" +
+
+    "<recipe>" +
         "<name>Butter Chicken Curry</name>" +
         "<recipeURL>recipe.html</recipeURL>" +
         "<pictureURL>curry.jpg</pictureURL>" +
