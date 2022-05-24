@@ -1,11 +1,10 @@
 // Function to display a list of recipes for the given region
-function showRecipesByRegion(inputRegion) {
+function showRecipesByRegion(inputRegion) { 
 
     // Reads XML data 
     parser = new DOMParser();
     xmlDoc = parser.parseFromString(xml, "text/xml");
 
-    var divRecipes = document.getElementById('recipes');      // THE PARENT DIV.
     var recipes = xmlDoc.getElementsByTagName('recipe');       // THE XML TAG NAME.
 
     for (var i = 0; i < recipes.length; i++) {
@@ -15,47 +14,98 @@ function showRecipesByRegion(inputRegion) {
 
         // Only display this recipe if it is matches the given region
         if (regionValue == inputRegion || inputRegion == "ALL") {
-
-            // Create 'a' tag for each recipe
-            var aRecipe = document.createElement('a');
-            aRecipe.href = "../recipes/" + recipes[i].getElementsByTagName("recipeURL")[0].childNodes[0].nodeValue;
-            aRecipe.className = "list-group-item list-group-item-action d-flex gap-3 py-3";
-
-            // Display picture for each recipe
-            var imgRecipe = document.createElement('img');
-            imgRecipe.src = "../img/" + recipes[i].getElementsByTagName("pictureURL")[0].childNodes[0].nodeValue;
-            imgRecipe.alt = "Pic 1";
-            imgRecipe.width = "64";
-            imgRecipe.height = "64";
-            aRecipe.appendChild(imgRecipe);
-
-            // Display recipe name
-            var divRecipeDetails = document.createElement("div");
-            divRecipeDetails.class = "d-flex gap-2 w-100 justify-content-between";
-            aRecipe.appendChild(divRecipeDetails);
-
-            var divNameRecipeDetails = document.createElement("div");
-            divRecipeDetails.appendChild(divNameRecipeDetails);
-
-            var recipeName = document.createElement("h8");
-            recipeName.class = "mb-0";
-            recipeName.innerText = recipes[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-            divNameRecipeDetails.appendChild(recipeName);
-
-            // Display recipe servings
-            var recipeServings = document.createElement("h6");
-            recipeServings.class = "opacity-50";
-            recipeServings.innerText = "Serves " + recipes[i].getElementsByTagName("servings")[0].childNodes[0].nodeValue;
-            divRecipeDetails.appendChild(recipeServings);
-
-            // Append to list
-            divRecipes.appendChild(aRecipe);
+            showRecipe(recipes[i]);
         }
     }
 }
 
+// Function to display given recipe data
+function showRecipe(recipe) {
+
+    // Create 'a' tag for each recipe
+    var aRecipe = document.createElement('a');
+    aRecipe.href = "../recipes/" + recipe.getElementsByTagName("recipeURL")[0].childNodes[0].nodeValue;
+    aRecipe.className = "list-group-item list-group-item-action d-flex gap-3 py-3";
+
+    // Display picture for each recipe
+    var imgRecipe = document.createElement('img');
+    imgRecipe.src = "../img/" + recipe.getElementsByTagName("pictureURL")[0].childNodes[0].nodeValue;
+    imgRecipe.alt = "Pic 1";
+    imgRecipe.width = "64";
+    imgRecipe.height = "64";
+    aRecipe.appendChild(imgRecipe);
+
+    // Display recipe name
+    var divRecipeDetails = document.createElement("div");
+    divRecipeDetails.class = "d-flex gap-2 w-100 justify-content-between";
+    aRecipe.appendChild(divRecipeDetails);
+
+    var divNameRecipeDetails = document.createElement("div");
+    divRecipeDetails.appendChild(divNameRecipeDetails);
+
+    var recipeName = document.createElement("h8");
+    recipeName.class = "mb-0";
+    recipeName.innerText = recipe.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    divNameRecipeDetails.appendChild(recipeName);
+
+    // Display recipe servings
+    var recipeServings = document.createElement("h6");
+    recipeServings.class = "opacity-50";
+    recipeServings.innerText = "Serves " + recipe.getElementsByTagName("servings")[0].childNodes[0].nodeValue;
+    divRecipeDetails.appendChild(recipeServings);
+
+    // Append to list
+    var divRecipes = document.getElementById('recipes');      // THE PARENT DIV.
+    divRecipes.appendChild(aRecipe);
+}
+
+// Function to display a list of all recipes for ALL regions
 function showAllRecipes() {
     showRecipesByRegion("ALL");
+}
+
+// Function to search for the given string in all recipe titles
+function search(inputRegion) {
+
+    // Retrieve search criteria
+    var searchText = document.getElementsByClassName('form-control me-2')[0].value;     
+
+    // Only perform search on a valid string
+    if(searchText != null && searchText != '') {
+
+        // Clear existing recipe list
+        var divRecipesNode = document.getElementById('recipes');
+        var divRecipes = divRecipesNode.childNodes;  
+        while(divRecipes.length > 0) {
+            divRecipesNode.removeChild(divRecipes[0]);
+        }
+
+        // Retrieve recipes from XML
+        var recipes = xmlDoc.getElementsByTagName('recipe');       // THE XML TAG NAME.
+
+        // Loop through XML recipes
+        for (var i = 0; i < recipes.length; i++) {
+
+            //Retrieve region for this recipe
+            regionValue = recipes[i].getElementsByTagName("region")[0].childNodes[0].nodeValue;
+
+            // Only continue if region matches the given region
+            if (regionValue == inputRegion || inputRegion == "ALL") {
+
+                // Get recipe name and compare with search string
+                recipeName = recipes[i].getElementsByTagName("name")[0].childNodes[0].nodeValue.toLowerCase();
+
+                // If this recipe name contains search string...            
+                if(recipeName.includes(searchText.toLowerCase())) {
+                    showRecipe(recipes[i]);
+                }
+            }
+        }
+    }
+    else {
+        // If an invalid search string was used, display all recipes for this region
+        showRecipesByRegion(inputRegion);
+    }
 }
 
 var xml =

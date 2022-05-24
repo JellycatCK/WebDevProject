@@ -8,6 +8,13 @@ body {
     background-color:whitesmoke;
 }
 
+main {
+  padding-top: 20px;
+  font-family: 'Gabriola';
+  font-size: x-large;
+  text-align: center;
+}
+
 /* ----------------------------------------------
    Map component styles
 -------------------------------------------------- */
@@ -28,6 +35,7 @@ body {
 .navbar-brand-custom {
   font-size: xx-large;
   font-family: 'Gabriola';
+  text-align: center;
 }
 
 .btn {
@@ -57,5 +65,5 @@ html {
     text-align: center;
     color: white;
     font-family: 'Gabriola';
-    cursor: url(img/spoon.gif), auto; /* Custom cursor - must be 128 x 128px max */
+    /*cursor: url(../img/spoon.gif), auto;  /* Custom cursor - must be 128 x 128px max */
   }
