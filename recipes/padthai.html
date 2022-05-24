@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Spaghetti Bolognese</title>
+    <title>Pad Thai</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="recipestyles.css">
-    <script src="recipescript.js"></script>
+    <link rel="stylesheet" href="../css/recipestyles.css">
+    <script src="../js/recipescript.js"></script>
     <link href="http://fonts.cdnfonts.com/css/gabriola" rel="stylesheet">
 </head>
 
@@ -20,22 +20,22 @@
                     <li class="nav-item dropdown">
                          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                          <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                             <li><a class="dropdown-item" href="frontPage.html">Map View</a></li>
-                             <li><a class="dropdown-item" href="allRecipes.html">All Recipes</a></li>
-                             <li><a class="dropdown-item" href="#">About</a></li>
+                             <li><a class="dropdown-item" href="../frontPage.html">Map View</a></li>
+                             <li><a class="dropdown-item" href="../regions/">All Recipes</a></li>
+                             <li><a class="dropdown-item" href="../about.html">About</a></li>
                          </ul>
                     </li>
 
                      <!-- Home button -->
                      <ul class="navbar-nav me-auto">
                          <li class="nav-item">
-                             <a class="nav-link active" href="frontPage.html">Home</a>
+                             <a class="nav-link active" href="../frontPage.html">Home</a>
                          </li>
                      </ul>
                 </ul>
 
                 <!-- Brand Header -->
-                <a class="navbar-brand navbar-brand-custom mx-auto" href="#">All Recipes</a>
+                <a class="navbar-brand navbar-brand-custom mx-auto" href="../regions/south_asia.html">South Asia Recipes</a>
 
                 <!-- Search function -->
                 <form class="d-flex">
@@ -48,13 +48,13 @@
 </header>
 
 <body>
-    
-<h1 id="recipename">Spaghetti Bolognese</h1>
-<p>Originates from: Italy</p>
-<p id="recipeinfo">Prep Time: 10 minutes | Cooking Time: 45 minutes | Difficulty: Easy</p>
+
+<h1 id="recipename">Pad Thai</h1>
+<p>Originates from: Thailand</p>
+<p id="recipeinfo">Prep Time: 15 minutes | Cooking Time: 15 minutes | Difficulty: Easy</p>
 <p><a id="recipelink" href="#Ingredients" class="link-primary">Jump To Recipe</a><br></p>
 
-<img src="spaghetti.jpeg" alt="Image of Spaghetti Bolognese" height="500px" width="400px">
+<img src="../img/padthai.jpeg" alt="Image of Pad Thai" height="500px" width="400px">
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -76,36 +76,52 @@
       <th>Amount</th>
     </tr>
     <tr>
-      <td id="spaghetti">Spaghetti</td>
-      <td><span id="spaghettiamount">500</span>g</td>
+      <td id="noodles">Noodles</td>
+      <td><span id="noodlesamount">240</span>g</td>
     </tr>
     <tr>
       <td>Olive Oil</td>
-      <td><span id="oilamount">2</span>tbsp</td>
+      <td><span id="padthaioilamount">2</span>tbsp</td>
     </tr>
     <tr>
-        <td id="beefmince">Beef Mince</td>
-        <td><span id="minceamount">400</span>g</td>
+        <td id="chicken">Chicken Breast</td>
+        <td><span id="chickenamount">400</span>g (sliced into chunks)</td>
     </tr>
     <tr>
-        <td>Onion</td>
-        <td><span id="onionamount">1</span> large (chopped)</td>
+        <td>Green Onion</td>
+        <td><span id="greenonionamount">2</span> (chopped)</td>
     </tr>
     <tr>
         <td>Garlic</td>
-        <td><span id="garlicamount">4</span> cloves (crushed)</td>
+        <td><span id="padthaigarlicamount">4</span> cloves (crushed)</td>
     </tr>
     <tr>
-        <td>Chopped Tomatoes</td>
-        <td><span id="tomatoamount">800</span>g</td>
+        <td>Carrots</td>
+        <td><span id="carrotamount">0.5</span>cup</td>
     </tr>
     <tr>
-        <td id="beefstock">Beef Stock</td>
-        <td><span id="stockamount">400</span>ml</td>
+        <td id="eggs">Eggs</td>
+        <td><span id="eggsamount">2</span></td>
     </tr>
     <tr>
-        <td id="parmesan">Parmesan</td>
-        <td><span id="cheeseamount">200</span>g</td>
+        <td>Brown Sugar</td>
+        <td><span id="sugaramount">6</span>tbsp</td>
+    </tr>
+    <tr>
+        <td>Tamarind Paste </td>
+        <td><span id="tamarindamount">2</span>tbsp</td>
+    </tr>
+    <tr>
+        <td id="soysauce">Soy Sauce</td>
+        <td><span id="soyamount">1</span>tbsp</td>
+    </tr>
+    <tr>
+        <td id="fishsauce">Fish Sauce</td>
+        <td><span id="fishamount">3</span>tbsp</td>
+    </tr>
+    <tr>
+        <td>Lime Juice</td>
+        <td><span id="limeamount">1</span> lime</td>
     </tr>
 </table>
 
@@ -119,12 +135,13 @@
 
 <h4>Method</h4>
 <ul class="method">
-    <li>Heat half of the olive oil in a large saucepan over medium heat. Cook the mince with a pinch of salt and pepper until dark brown. Transfer to a bowl and set aside.</li>
-    <li>Heat the rest of the olive oil in the same saucepan. Add the onions and cook until translucent; about 5 minutes. Add the garlic and cook for another 2 minutes.</li>
-    <li>Add the mince back to the pan, with the tinned tomatoes and stock, and mix well.</li>
-    <li>Simmer with the lid off for around 30 minutes, until reduced to a thick consistency. Taste and season as desired.</li>
-    <li>While the sauce is simmering, bring a large saucepan of water to the boil and cook spaghetti according to packet instructions.</li>
-    <li>Drain the cooked spaghetti, and add to the sauce. Mix well, and serve with fresh basil and parmesan.</li>
+    <li>Cook the noodles according to the packet instructions, then rinse in cold water.</li>
+    <li>Make the sauce by qhisking together the sugar, tamarind paste, fish sauce, soy sauce and lime juice. Set aside.</li>
+    <li>Heat half of the oil in a large saucepan or wok over medium-high heat, and saute the chicken (or tofu) for 4-5 minutes, until cooked through. </li>
+    <li>Push the chicken (or tofu) to the side of the pan, and add the remainder of the oil. Add the green onion, carrot and garlic, and saute fo 2 minutes, stirring frequently.</li>
+    <li>Push the vegetables to the side of the pan, and add the eggs. Stir the eggs frequently until cooked through, breaking into small pieces with the spatula.</li>
+    <li>Add the noodles and sauce to the pan and stir to combine.</li>
+    <li>Serve topped with peanuts, sesame seeds, or chilli flakes, with a fresh squeeze of lime.</li>
 </ul>
 
 </body>

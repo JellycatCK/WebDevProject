@@ -79,56 +79,56 @@ var simplemaps_continentmap_mapdata={
       description: "default",
       color: "#CC33FF",
       hover_color: "#751d92",
-      url: "south_america.html"
+      url: "regions/south_america.html"
     },
     NA: {
       name: "North America",
       description: "default",
       color: "#3366FF",
       hover_color: "#1c388c",
-      url: "north_america.html"
+      url: "regions/north_america.html"
     },
     EU: {
       name: "Europe",
       description: "default",
       color: "#FF3366",
       hover_color: "#c0264d",
-      url: "europe.html"
+      url: "regions/europe.html"
     },
     AF: {
       name: "Africa",
       description: "default",
       color: "#33FF66",
       hover_color: "#1a8535",
-      url: "africa.html"
+      url: "regions/africa.html"
     },
     NS: {
       name: "North Asia",
       description: "default",
       color: "#33FFCC",
       hover_color: "#23b28e",
-      url: "north_asia.html"
+      url: "regions/north_asia.html"
     },
     SS: {
       name: "South Asia",
       description: "default",
       color: "#FF6633",
       hover_color: "#ac4422",
-      url: "south_asia.html"
+      url: "regions/south_asia.html"
     },
     ME: {
       name: "Middle East",
       description: "default",
       color: "#FFCC33",
       hover_color: "#bb9525",
-      url: "middle_east.html"
+      url: "regions/middle_east.html"
     },
     OC: {
       name: "Oceania",
       description: "default",
       color: "#FF33CC",
       hover_color: "#b1238d",
-      url: "oceania.html"
+      url: "regions/oceania.html"
     }
   },
   // locations: {

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="recipeRetrieval.js"></script>
+    <meta name="author" content="Becky & Sarah">
+    
     <title>All Recipes</title>
 
     <!-- Bootstrap core CSS -->
@@ -15,11 +15,11 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sticky-footer-navbar/">
 
     <!-- Our Custom styles -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
 
     <!-- Recipe Retrieval JS -->
-    <script src="recipeRetrieval.js"></script>
+    <script src="../js/recipeRetrieval.js"></script>
 
 </head>
 <body class="d-flex flex-column h-100">
@@ -34,16 +34,16 @@
                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown01">
-                                <li><a class="dropdown-item" href="frontPage.html">Map View</a></li>
-                                <li><a class="dropdown-item" href="allRecipes.html">All Recipes</a></li>
-								<li><a class="dropdown-item" href="#">About</a></li>
+                                <li><a class="dropdown-item" href="../frontPage.html">Map View</a></li>
+                                <li><a class="dropdown-item" href="#">All Recipes</a></li>
+								<li><a class="dropdown-item" href="../about.html">About</a></li>
                             </ul>
                        </li>
 
                         <!-- Home button -->
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="frontPage.html">Home</a>
+                                <a class="nav-link active" href="../frontPage.html">Home</a>
                             </li>
                         </ul>
                    </ul>
@@ -67,6 +67,15 @@
        <div class="list-group" id="recipes"></div>
        
    </main>
+
+    <!-- Display footer -->
+    <footer class="footer">
+
+        <div class="container">
+        <span>Website developed by Becky and Sarah</span>
+        </div>
+
+    </footer>
 
     <script>
         // Displays all recipes for this region using js function
