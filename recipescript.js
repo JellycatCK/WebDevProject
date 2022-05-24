@@ -1,110 +1,61 @@
+function setInnerTextByElementId(elementId, innerTextToSet) {
+    var element = document.getElementById(elementId);
+    if (element != null)
+        element.innerText = innerTextToSet;
+}
 function veganfunction() {
-    document.getElementById("beefmince").innerText = "Vegan Mince";
-    document.getElementById("beefstock").innerText = "Vegetable Stock";
-    document.getElementById("parmesan").innerText = "Vegan Cheese";
-    document.getElementById("chicken").innerText = "Tofu";
-    document.getElementById("eggs").innerText = "Omit";
-    document.getElementById("fishsauce").innerText = "More Soy Sauce";
+    setInnerTextByElementId("beefmince","Vegan Mince");
+    setInnerTextByElementId("beefstock","Vegetable Stock");
+    setInnerTextByElementId("parmesan","Vegan Cheese");
+    setInnerTextByElementId("chicken","Tofu");
+    setInnerTextByElementId("eggs"," ");
+    setInnerTextByElementId("fishsauce","More Soy Sauce");
 }
 
 function glutenfunction() {
-    document.getElementById("spaghetti").innerText = "Gluten Free Pasta";
-    document.getElementById("noodles").innerText = "Rice Noodles";
+    setInnerTextByElementId("spaghetti","Gluten Free Pasta");
+    setInnerTextByElementId("noodles","Rice Noodles");
 }
 
 function resetfunction() {
-    document.getElementById("beefmince").innerText = "Beef Mince";
-    document.getElementById("beefstock").innerText = "Beef Stock";
-    document.getElementById("parmesan").innerText = "Parmesan";
-    document.getElementById("spaghetti").innerText = "Spaghetti";
-    document.getElementById("chicken").innerText = "Chicken";
-    document.getElementById("eggs").innerText = "Eggs";
-    document.getElementById("fishsauce").innerText = "Fish Sauce";
-    document.getElementById("noodles").innerText = "Noodles";
+    setInnerTextByElementId("beefmince","Beef Mince");
+    setInnerTextByElementId("beefstock","Beef Stock");
+    setInnerTextByElementId("parmesan","Parmesan");
+    setInnerTextByElementId("spaghetti","Spaghetti");
+    setInnerTextByElementId("chicken","Chicken");
+    setInnerTextByElementId("eggs","Eggs");
+    setInnerTextByElementId("fishsauce","Fish Sauce");
+    setInnerTextByElementId("noodles","Noodles");
 }
 
+function calculateNewVolume(elementId, singleVolume) {
+    var element = document.getElementById(elementId);
+    var servings = document.getElementById("servings").value;
+    var volume = singleVolume;
+    if (element != null)
+        element.innerText = servings * volume;
+}
 
 function calculate() {
-    var num1 = document.getElementById("servings").value;
-
-    var num2 = 125
-    var finalnum = num1 * num2;
-    document.getElementById("spaghettiamount").innerText = finalnum;
-
-    var num2 = 0.5
-    var finalnum = num1 * num2;
-    document.getElementById("oilamount").innerText = finalnum;
-
-    var num2 = 100
-    var finalnum = num1 * num2;
-    document.getElementById("minceamount").innerText = finalnum;
-
-    var num2 = 0.25
-    var finalnum = num1 * num2;
-    document.getElementById("onionamount").innerText = finalnum;
-
-    var num2 = 1
-    var finalnum = num1 * num2;
-    document.getElementById("garlicamount").innerText = finalnum;
-
-    var num2 = 200
-    var finalnum = num1 * num2;
-    document.getElementById("tomatoamount").innerText = finalnum;
-
-    var num2 = 100
-    var finalnum = num1 * num2;
-    document.getElementById("stockamount").innerText = finalnum;
-
-    var num2 = 50
-    var finalnum = num1 * num2;
-    document.getElementById("cheeseamount").innerText = finalnum;
-
-    var num2 = 60
-    var finalnum = num1 * num2;
-    document.getElementById("noodlesamount").innerText = finalnum;
-
-    var num2 = 0.5
-    var finalnum = num1 * num2;
-    document.getElementById("padthaioilamount").innerText = finalnum;
-
-    var num2 = 100
-    var finalnum = num1 * num2;
-    document.getElementById("chickenamount").innerText = finalnum;
-
-    var num2 = 0.5
-    var finalnum = num1 * num2;
-    document.getElementById("greenonionamount").innerText = finalnum;
-
-    var num2 = 1
-    var finalnum = num1 * num2;
-    document.getElementById("padthaigarlicamount").innerText = finalnum;
-
-    var num2 = 0.125
-    var finalnum = num1 * num2;
-    document.getElementById("carrotamount").innerText = finalnum;
-
-    var num2 = 0.5
-    var finalnum = num1 * num2;
-    document.getElementById("eggsamount").innerText = finalnum;
-
-    var num2 = 1.5
-    var finalnum = num1 * num2;
-    document.getElementById("sugaramount").innerText = finalnum;
-
-    var num2 = 0.5
-    var finalnum = num1 * num2;
-    document.getElementById("tamarindamount").innerText = finalnum;
-
-    var num2 = 0.25
-    var finalnum = num1 * num2;
-    document.getElementById("soyamount").innerText = finalnum;
-
-    var num2 = 0.75
-    var finalnum = num1 * num2;
-    document.getElementById("fishamount").innerText = finalnum;
-
-    var num2 = 0.25
-    var finalnum = num1 * num2;
-    document.getElementById("limeamount").innerText = finalnum;
+    calculateNewVolume("spaghettiamount", 125);
+    calculateNewVolume("oilamount", 0.5);
+    calculateNewVolume("minceamount", 100);
+    calculateNewVolume("onionamount", 0.25);
+    calculateNewVolume("garlicamount", 1);
+    calculateNewVolume("tomatoamount", 200);
+    calculateNewVolume("stockamount", 100);
+    calculateNewVolume("cheeseamount", 50);
+    calculateNewVolume("noodlesamount", 60);
+    calculateNewVolume("padthaioilamount", 0.5);
+    calculateNewVolume("chickenamount", 100);
+    calculateNewVolume("greenonionamount", 0.5);
+    calculateNewVolume("padthaigarlicamount", 1);
+    calculateNewVolume("carrotamount", 0.125);
+    calculateNewVolume("eggsamount", 0.5);
+    calculateNewVolume("sugaramount", 1.5);
+    calculateNewVolume("tamarindamount", 0.5);
+    calculateNewVolume("soyamount", 0.25);
+    calculateNewVolume("fishamount", 0.75);
+    calculateNewVolume("limeaount", 0.25);
 }
 
