@@ -70,15 +70,15 @@ function search(inputRegion) {
     // Retrieve search criteria
     var searchText = document.getElementsByClassName('form-control me-2')[0].value;     
 
+    // Clear existing recipe list
+    var divRecipesNode = document.getElementById('recipes');
+    var divRecipes = divRecipesNode.childNodes;  
+    while(divRecipes.length > 0) {
+        divRecipesNode.removeChild(divRecipes[0]);
+    }
+
     // Only perform search on a valid string
     if(searchText != null && searchText != '') {
-
-        // Clear existing recipe list
-        var divRecipesNode = document.getElementById('recipes');
-        var divRecipes = divRecipesNode.childNodes;  
-        while(divRecipes.length > 0) {
-            divRecipesNode.removeChild(divRecipes[0]);
-        }
 
         // Retrieve recipes from XML
         var recipes = xmlDoc.getElementsByTagName('recipe');       // THE XML TAG NAME.
