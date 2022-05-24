@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+    font-family: 'Gabriola', sans-serif;
+    padding-top: 5rem;
+    background-color:whitesmoke;
+}
+
+html {
+    padding-left: calc(100vw - 100%);
+}
+
+img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+table, th, tr, td {
+    border: 1px solid;
+}
+
+th {
+    background-color: darkcyan;
+}
+
+.method {
+    margin-left: auto;
+    margin-right: auto;
+    list-style-position: inside;
+}
+
+button {
+    border-radius: 6px;
+}
+
+input {
+    border-radius: 6px;
+}
+
+
+/* ----------------------------------------------
+   Footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+    font-family: 'Gabriola';
+    cursor: url(img/spoon.gif), auto; /* Custom cursor - must be 128 x 128px max */
+  }
+
+  /* ----------------------------------------------
+   Nav bar styles
+-------------------------------------------------- */
+.navbar-custom {
+    background-color: darkcyan;
+    font-family: 'Gabriola';
+    color: white;
+    
+  }
+  
+  .navbar-brand-custom {
+    font-size: xx-large;
+    font-family: 'Gabriola';
+  }
+  
+  .btn {
+      color:white;
+      border-color: white;
+  }
